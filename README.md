@@ -18,7 +18,7 @@ This color picker tool allows users to extract colors from an uploaded image and
 
 ## Screenshots
 
-![Desktop app Screenshot](./images/1.jpg)
+![Desktop app Screenshot](./images/1.png)
 
 ## **Authors**
 
