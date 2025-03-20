@@ -48,12 +48,12 @@ const Main = () => {
   };
 
   return (
-    <div className="h-[calc(100vh-158px)] w-full flex justify-center items-center mb-[20px]">
+    <div className="h-[calc(100vh-196px)] w-full flex justify-center items-center mb-[20px]">
       {!image ? (
         <ImageInput onDrop={onDrop} onPaste={onPaste} />
       ) : (
         <div className="flex gap-[40px]">
-          <div className="flex flex-col items-center w-[250px]">
+          <div className="flex flex-col w-[250px]">
             <ColorCard color={savedColor || hexColor} />
             <Result color={savedColor || hexColor}/>
           </div>

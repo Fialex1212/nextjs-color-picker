@@ -42,7 +42,7 @@ const CanvasImage = ({image, setHexColor, onCanvasClick}) => {
       onClick={onCanvasClick}
       width={900}
       height={500}
-      style={{ border: "1px solid black" }}
+      style={{ border: "1px solid black", borderRadius: "0.5rem" }}
     />
   );
 };
