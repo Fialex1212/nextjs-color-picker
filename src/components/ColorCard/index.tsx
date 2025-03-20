@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "../ui/card";
 
-const ColorCard = ({ color }) => {
+const ColorCard = ({ color }: {color: string}) => {
   return (
     <div className="font-sans">
       <Card

@@ -25,14 +25,20 @@ const CanvasImage = ({image, setHexColor, onCanvasClick}) => {
   const updateColor = (e) => {
     const canvas = canvasRef.current;
     const rect = canvas.getBoundingClientRect();
-    const x = Math.min(Math.max(e.clientX - rect.left, 0), canvas.width);
-    const y = Math.min(Math.max(e.clientY - rect.top, 0), canvas.height);
     const ctx = canvas.getContext("2d");
-
+  
+    // Adjust for device pixel ratio
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
+  
+    // Correct cursor position
+    const x = (e.clientX - rect.left) * scaleX;
+    const y = (e.clientY - rect.top) * scaleY;
+  
     const imageData = ctx.getImageData(x, y, 1, 1).data;
     const rgb = { r: imageData[0], g: imageData[1], b: imageData[2] };
     const hex = rgbToHex(rgb.r, rgb.g, rgb.b);
-
+  
     setHexColor(hex);
   };
   return (
