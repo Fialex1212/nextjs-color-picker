@@ -3,8 +3,9 @@ import { Label } from "@radix-ui/react-label";
 import { Button } from "../ui/button";
 import { Copy } from "lucide-react";
 import { toast } from "sonner";
+import { CopyInputProps } from "./types";
 
-const CopyInput = ({ text, type }: { text: string; type: string }) => {
+const CopyInput: React.FC<CopyInputProps> = ({ text, type }) => {
   const handleCopy = (text: string, type: string) => {
     navigator.clipboard.writeText(text);
     toast.success(`You copied ${type}`);

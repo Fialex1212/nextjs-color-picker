@@ -13,8 +13,8 @@ const Main = () => {
   const [hexColor, setHexColor] = useState("#000000");
   const [savedColor, setSavedColor] = useState<string | null>(null);
 
-  const onDrop = (accepdedFile: File[]) => {
-    const file = accepdedFile[0];
+  const onDrop = (acceptedFiles: File[]) => {
+    const file = acceptedFiles[0];
     if (file) {
       const reader = new FileReader();
       reader.onload = () => {
@@ -26,7 +26,7 @@ const Main = () => {
 
   const { getRootProps, getInputProps, open } = useDropzone({
     onDrop,
-    accept: "image/*" as const,
+    accept: { "image/*": [] },
     noClick: true,
   });
 
@@ -59,7 +59,6 @@ const Main = () => {
     <div className="h-[calc(100vh-196px)] w-full flex justify-center items-center mb-[20px]">
       {!image ? (
         <ImageInput
-          onDrop={onDrop}
           onPaste={onPaste}
           getRootProps={getRootProps}
           getInputProps={getInputProps}

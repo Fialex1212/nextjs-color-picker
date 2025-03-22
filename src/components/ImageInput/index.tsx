@@ -2,9 +2,14 @@
 
 import React from "react";
 import { Label } from "../ui/label";
+import { ImageInputProps } from "./types";
 
-const ImageInput = ({ onDrop, onPaste, getRootProps, getInputProps, open }) => {
-
+const ImageInput: React.FC<ImageInputProps> = ({
+  onPaste,
+  getRootProps,
+  getInputProps,
+  open,
+}) => {
   return (
     <div
       {...getRootProps()}
