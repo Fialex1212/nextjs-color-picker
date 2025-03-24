@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  siteUrl: "https://mywebsite.com",
+  generateRobotsTxt: true,
 };
 
 export default nextConfig;
