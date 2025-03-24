@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://nextjs-color-picker-ten.vercel.app'),
   title: "Color Picker App",
   description:
     "This color picker tool allows users to extract colors from an uploaded image and convert them into various formats (Hex, RGB, CMYK, HSV, HSL). It includes a canvas for selecting colors, a UI to display chosen colors, and clipboard functionality for easy copying.",
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
         url: "https://nextjs-color-picker-ten.vercel.app/og-image.jpg",
         width: "1200",
         height: "630",
-        alt: "Color Pciker App Preview",
+        alt: "Color Picker App Preview",
       },
     ],
     url: "https://nextjs-color-picker-ten.vercel.app/",
