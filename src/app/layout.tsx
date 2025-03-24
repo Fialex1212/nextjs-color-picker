@@ -27,7 +27,7 @@ export const metadata: Metadata = {
       "This color picker tool allows users to extract colors from an uploaded image and convert them into various formats (Hex, RGB, CMYK, HSV, HSL). It includes a canvas for selecting colors, a UI to display chosen colors, and clipboard functionality for easy copying.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://nextjs-color-picker-ten.vercel.app/og-image.jpg",
         width: "1200",
         height: "630",
         alt: "Color Pciker App Preview",
