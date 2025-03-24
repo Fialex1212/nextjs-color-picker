@@ -25,6 +25,7 @@ const CanvasImage: React.FC<CanvasImageProps> = ({
     const img = new Image();
     img.crossOrigin = "anonymous";
     img.src = image;
+    
 
     img.onload = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
