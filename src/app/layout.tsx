@@ -15,21 +15,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Color Pciker App",
+  title: "Color Picker App",
   description:
     "This color picker tool allows users to extract colors from an uploaded image and convert them into various formats (Hex, RGB, CMYK, HSV, HSL). It includes a canvas for selecting colors, a UI to display chosen colors, and clipboard functionality for easy copying.",
   keywords:
     "color picker, extract colors, hex to rgb, rgb to cmyk, hsv converter, hsl converter, image color tool, web design tools, color conversion",
   robots: "index, follow",
   openGraph: {
-    title: "Color Pciker App",
+    title: "Color Picker App",
     description:
       "This color picker tool allows users to extract colors from an uploaded image and convert them into various formats (Hex, RGB, CMYK, HSV, HSL). It includes a canvas for selecting colors, a UI to display chosen colors, and clipboard functionality for easy copying.",
     images: [
       {
         url: "/og-image.jpg",
         width: "1200",
-        height: "600",
+        height: "630",
         alt: "Color Pciker App Preview",
       },
     ],
