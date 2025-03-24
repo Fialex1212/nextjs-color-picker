@@ -10,12 +10,18 @@ const ImageInput: React.FC<ImageInputProps> = ({
   getInputProps,
   open,
 }) => {
+  const handleOpen = (e: React.MouseEvent | React.TouchEvent) => {
+    e.preventDefault();
+    open();
+  };
+
   return (
     <div
       {...getRootProps()}
       className="border-dashed border-2 p-4 flex items-center justify-center cursor-pointer rounded-[0.5rem] h-full w-full"
       onPaste={onPaste}
-      onClick={open}
+      onClick={handleOpen}
+      onTouchStart={handleOpen}
     >
       <input {...getInputProps()} />
       <Label>Upload Image, Drag & drop or click to select one</Label>

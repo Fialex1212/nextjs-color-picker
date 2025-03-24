@@ -27,7 +27,6 @@ const Main = () => {
   const { getRootProps, getInputProps, open } = useDropzone({
     onDrop,
     accept: { "image/*": [] },
-    noClick: true,
   });
 
   const onPaste = (e: React.ClipboardEvent) => {
