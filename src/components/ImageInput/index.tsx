@@ -18,7 +18,7 @@ const ImageInput: React.FC<ImageInputProps> = ({
   return (
     <div
       {...getRootProps()}
-      className="border-dashed border-2 p-4 flex items-center justify-center cursor-pointer rounded-[0.5rem] h-full w-full"
+      className="border-dashed border-2 p-4 flex items-center justify-center cursor-pointer rounded-[0.5rem] h-full w-full min-h-[500px]"
       onPaste={onPaste}
       onClick={handleOpen}
       onTouchStart={handleOpen}
