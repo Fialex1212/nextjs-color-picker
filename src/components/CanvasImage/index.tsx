@@ -8,6 +8,7 @@ const CanvasImage: React.FC<CanvasImageProps> = ({
   image,
   setHexColor,
   onCanvasClick,
+  className = ""
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [isClient, setIsClient] = useState(false);
@@ -65,6 +66,7 @@ const CanvasImage: React.FC<CanvasImageProps> = ({
       width={900}
       height={500}
       style={{ border: "1px solid black", borderRadius: "0.5rem" }}
+      className={`${className}`}
     />
   );
 };

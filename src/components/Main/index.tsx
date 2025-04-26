@@ -55,7 +55,7 @@ const Main = () => {
   };
 
   return (
-    <div className="h-[calc(100vh-196px)] w-full flex justify-center items-center mb-[20px]">
+    <div className="min-h-[calc(100vh-196px)] w-full flex justify-center items-center mb-5 px-4">
       {!image ? (
         <ImageInput
           onPaste={onPaste}
@@ -65,8 +65,8 @@ const Main = () => {
         />
       ) : (
         <div>
-          <div className="flex gap-[40px] mb-[20px]">
-            <div className="flex flex-col w-[250px]">
+          <div className="flex flex-col lg:flex-row gap-10 mb-5 items-center lg:items-start">
+            <div className="flex flex-col w-full lg:w-[250px]">
               <ColorCard color={savedColor || hexColor} />
               <Result color={savedColor || hexColor} />
             </div>
@@ -75,15 +75,14 @@ const Main = () => {
               image={image}
               setHexColor={setHexColor}
               onCanvasClick={saveColor}
+              className="max-w-full h-auto"
             />
           </div>
-          <div className="flex justify-center mb-[6px]">
+          <div className="flex justify-center mb-1">
             <Button
               variant="destructive"
               className="cursor-pointer"
-              onClick={() => {
-                setImage(null);
-              }}
+              onClick={() => setImage(null)}
             >
               Reset Image
             </Button>
